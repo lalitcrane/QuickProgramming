@@ -9,7 +9,7 @@
    * ThreeJS script inside angular component did not work.
    * But in the index.html, ThreeJs script outside app-component works fine.
        * start body tag
-          * <app-root></app-root>
+          * app-root - app-root end tag
            * ---- Beow is ThreeJS Scripts ----
            * <script src="https://threejs.org/build/three.js"></script>
            * <script>
