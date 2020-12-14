@@ -56,3 +56,7 @@ Not suited for game applications
 * Paper.js
 * Pt.js
 
+
+### Multiple Canvas and Multiple Scenes
+
+  https://threejsfundamentals.org/threejs/lessons/threejs-multiple-scenes.html
