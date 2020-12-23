@@ -5,7 +5,7 @@
 
    * Bootstrap works fine with ThreeJS
    
-## Angular with Three JS
+## Angular with Three JS - Outside Angular Components
    * ThreeJS script inside angular component did not work.
    * But in the index.html, ThreeJs script outside app-component works fine.
        * start body tag
@@ -18,6 +18,13 @@
               ### --- Full script below ----
            * </script>
        *  end body tag
+       
+### Angular with Three JS - Inside Component
+
+    * Use link https://stackoverflow.com/questions/59149154/how-to-use-three-js-with-angular-7
+    * Add the script in component's constructor.
+    * All HTML text (from all components) will appear at the top, and all game appear at bottom,  irrespective of order of components. 
+    * You can add More than one simulation in the same page.
 
 ### HTML5 Canvas is a very easy, but a little inflexible way of drawing Graphics. But you can embed SVG in HTML5 
 
