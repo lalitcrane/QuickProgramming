@@ -1,4 +1,15 @@
 
+#### Frameworks for HTML DOM Manupulations
+    * Angular 
+        * Powerful like no other.
+        * Steep Learning Curve.
+        * Require complex Development Environment.
+    * JQuery - Use it when not using Angular
+        * Tricky to use with Angular.
+        * Easiest to use with Bootstrap.
+        * Fastest way to develop Web Applications.
+        * When we do not need Angular, Use JQuery and Bootstrap.
+
 
 #### Options to connect over HTTP in Javascript
   
