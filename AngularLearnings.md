@@ -22,3 +22,23 @@
  * In app.component.html add router-outlet tag (Empty Tag)
  
  
+ #### HTTP Client Module Usage
+    Link: https://stackoverflow.com/questions/46019771/catching-errors-in-angular-httpclient
+    ###### Receive Data/Catch Error
+    import 'rxjs/add/operator/catch'; // don't forget this, or you'll get a runtime error
+
+    this.httpClient
+      .get("data-url")
+      .subscribe(
+        data => console.log('success', data),
+        error => console.log('oops', error)
+      );
+      
+##### Handling Exceptions in HTTPClient Module
+
+     * Link: https://www.pluralsight.com/guides/handling-exceptions-using-the-angular-httpclient
+     * Also contains code to understand HTTPClient Module working
+      
+     
+ 
+ 
