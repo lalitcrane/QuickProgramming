@@ -34,6 +34,9 @@
         error => console.log('oops', error)
       );
       
+     Link 2: Good Example
+     https://www.tutorialspoint.com/angular6/angular6_http_client.htm
+      
 ##### Handling Exceptions in HTTPClient Module
 
      * Link: https://www.pluralsight.com/guides/handling-exceptions-using-the-angular-httpclient
