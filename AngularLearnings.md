@@ -43,5 +43,17 @@
      * Also contains code to understand HTTPClient Module working
       
      
- 
+ #### Using JQuery with Angular
+      * Should be avoided.
+      * Save to local folder ($ npm install jquery — save) or Use CDN
+      * In component.ts file add line 
+          declare var $: any;
+       * In your ts file, call jquery functions they way it is done normally (with $ variable)
+           ngOnInit(){
+            $(‘button’).click(function(){
+            alert(‘Wass up!’);
+             });
+            }
+      
+      * Link: https://blog.bitsrc.io/how-to-use-jquery-with-angular-when-you-absolutely-have-to-42c8b6a37ff9
  
