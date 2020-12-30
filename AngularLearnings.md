@@ -56,4 +56,11 @@
             }
       
       * Link: https://blog.bitsrc.io/how-to-use-jquery-with-angular-when-you-absolutely-have-to-42c8b6a37ff9
+
+#### Sharing Data beetween components - 4 Ways 
+ * https://fireship.io/lessons/sharing-data-between-angular-components-four-methods/
+ 1. Parent to Child: Sharing Data via Input
+ 2. Child to Parent: Sharing Data via ViewChild
+ 3. Child to Parent: Sharing Data via Output() and EventEmitter
+ 4. Unrelated Components: Sharing Data with a Service
  
