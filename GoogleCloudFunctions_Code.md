@@ -1,4 +1,19 @@
+#### Organizing Multiple Functions
 
+    * https://stackoverflow.com/questions/43486278/how-do-i-structure-cloud-functions-for-firebase-to-deploy-multiple-functions-fro
+    
+#### Organizing Multiple Firebase Functions
+    * https://firebase.google.com/docs/functions/organize-functions
+    
+#### Organizing Typescript Functions
+    * Folder Structure 
+        * /functions
+            * --index.ts
+            * --foo.ts
+    * Near all your regular imports at the top just export all the functions from foo.ts.
+
+            *   export * from './foo';
+            
 
 #### Writing Function
 
