@@ -1,3 +1,12 @@
+#### Google Cloud HTTP Functions (Full Guide)
+
+     * https://cloud.google.com/functions/docs/writing/http#handling_http_methods
+     * request types - GET, POST, 
+     * CORS Request
+     * Multipart request
+     * Content Types
+     * Using Cloud Storage
+
 #### Organizing Multiple Functions
 
     * https://stackoverflow.com/questions/43486278/how-do-i-structure-cloud-functions-for-firebase-to-deploy-multiple-functions-fro
