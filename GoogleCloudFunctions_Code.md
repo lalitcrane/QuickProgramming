@@ -65,3 +65,31 @@
        * View Logs 
        
           * $ gcloud functions logs read helloHttp
+
+#### Organize Functions - Use Express App 
+
+         * https://medium.com/google-cloud/express-routing-with-google-cloud-functions-36fb55885c68
+         * In the end use export.users=app to give top level function a name. Otherwise app name gets name "app"
+                const express = require('express');
+
+                // Create an Express object and routes (in order)
+                const app = express();
+                app.use('/users/:id', getUser);
+                app.use('/users/', getAllUsers);
+                app.use(getDefault);
+
+                // Set our GCF handler to our Express app.
+                exports.users = app;
+          * Instead the last statement exports.users = app, you can use module.export
+               module.exports = {
+                    app
+                };
+          * Deploy function with entry point app name
+              * $ gcloud functions deploy first-function --runtime nodejs8 --trigger-http --entry-point app
+         
+#### Chaining Functions - ExpressJS Middleware app.use()
+           
+           * Use app.use() in express js as middleware to chain multiple functions together.
+           * In middleware functions, the functions has access to request and response objects.
+           
+           
