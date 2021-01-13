@@ -1,5 +1,24 @@
 
-#### Promise
+#### Promise in Simple
+
+     const promise = new Promise((resolve, reject) => {
+	// Make a network request
+            if (response.status === 200) {
+               resolve(response.body)
+            } else {
+               const error = { ... }
+               reject(error)
+            }
+         })
+
+         promise.then(res => {
+                  console.log(res)
+         }).catch(err => {
+                  console.log(err)
+         })
+
+
+#### Promise Example
 
          //1. Create a new function that returns a promise
             function firstFunction() {
