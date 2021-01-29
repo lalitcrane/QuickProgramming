@@ -5,6 +5,7 @@
       $ ng new myapp
 
 ##### Add New Component
+      $ cd ~/angularprojects/simplegameapp/src/app/
       $ ng generate component xyz
 
 ####  Add Angular Material
