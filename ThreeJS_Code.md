@@ -36,3 +36,13 @@
             opacity: 0.5,
             transparent: true,
           });
+          
+  #### Set Position 
+  
+       mesh.position.set(100, 100, 100);
+       or 
+       mesh.position.setX(100);
+       mesh.position.setZ(100, 100, 100);
+
+
+
