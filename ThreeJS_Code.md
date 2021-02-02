@@ -27,3 +27,12 @@
           const points = path.getPoints();
 
           const geometry = new THREE.BufferGeometry().setFromPoints( points );
+          
+ #### Transparent Color
+ 
+        var color = "green" ;
+         const material = new THREE.MeshPhongMaterial({
+            color,
+            opacity: 0.5,
+            transparent: true,
+          });
