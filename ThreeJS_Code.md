@@ -46,3 +46,28 @@
 
 
 
+#### Wireframes, Lines, Faces, Points Geometry
+
+     * https://blog.mozvr.com/threejs-lines-and-faces/
+     * Points Geometry
+     
+        const geo = new THREE.SphereGeometry(2)
+        const mat = new THREE.PointsMaterial({
+            color:0xffffff,
+            size: 0.1,
+        })
+        mesh = new THREE.Points(geo,mat)
+        
+        * Wireframe
+        
+        var geo = new THREE.SphereGeometry( 2 );
+        var geometry = new THREE.WireframeGeometry2( geo );
+        matLine = new THREE.LineMaterial( {
+            color: 0xff0000,
+            linewidth: 5, // in pixels
+        } );
+        matLine.resolution.set( window.innerWidth, window.innerHeight );
+        mesh = new THREE.Wireframe( geometry, matLine );
+        mesh.position.z = -10
+        scene.add( mesh );
+
