@@ -1,5 +1,11 @@
 
 
+#### Do not include API Security Keys in Github
+
+     Put Security Keys in a file. 
+     Read the file in Code.
+     Add those files in .gitignore list.
+
 #### Python Code - Don't upload API Security Keys to Github
 
         $ nano ~/.bash_profile.
