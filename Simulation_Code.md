@@ -18,6 +18,8 @@
              * 
      2. SciPy package in python
              * rv, pdf, cdf, sv, ppf, stat variables (rv -random variables, cdf - cumulative dist function, pdf probability functions.
+             * Example: Generate Random Number
+                  *   r = poisson.rvs(mu, size=1000)
              * sv - survival and hazard  functions
              * monent functions
              * normal, gaussian
