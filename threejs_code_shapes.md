@@ -3,10 +3,14 @@
 
     const addTube = function(scene) {
 
-        const geometry = new THREE.TorusGeometry( 5, 1, 16, 100 );
-        const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-        const torus = new THREE.Mesh( geometry, material );
-        scene.add( torus );
+       // Use Sine Curve to follow the Path of Tube
+       
+        const path = new CustomSinCurve( 1 );
+        const geometry = new THREE.TubeGeometry( path, 10, 1, 8, true );
+        const material = new THREE.MeshBasicMaterial( { color: "white" } );
+        const mesh = new THREE.Mesh( geometry, material );
+        scene.add( mesh );
+
     }
 
 #### Add Trapezoid 
