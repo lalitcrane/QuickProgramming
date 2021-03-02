@@ -8,6 +8,47 @@
     * Dimmer Intensity
     * https://babylonjsguide.github.io/gamelets/Sequence
 
+#### Dispose of a Mesh 
+
+   * cylinder.dispose()
+
+#### Getting Points and Drawing Edge Lines of a Mesh
+
+     * https://playground.babylonjs.com/#1H7L5C#37
+     * Get Points Data. It comes in single array with x, y, z for each point.
+     * For36 points, there will be 108 array elements.
+     *   var pdata = cylinder.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+	      var ndata = cylinder.getVerticesData(BABYLON.VertexBuffer.NormalKind);
+     * Recreate the original Mesh with edges
+
+             var cyPoints = [] ;
+
+              for (var p = 0; p < pdata.length; p += 3) {
+                const cylinder = BABYLON.MeshBuilder.CreateCylinder("cylinder", {
+                   tessellation: 3, diameterTop : 0.1, diameterBottom : 0.1, height: 0.1
+                });
+
+                cylinder.position.x = pdata[p] ;
+                cylinder.position.y = pdata[p+1] ;
+                cylinder.position.z =  pdata[p+2] ;
+
+                const tmpVector = new BABYLON.Vector3(pdata[p], pdata[p+1], pdata[p+2]) ;
+                cyPoints.push(tmpVector) ;
+
+                cylinder.material = redMat ;
+
+              }
+              
+       * Draw Edge Lines
+
+              const lineOptions = {
+                   points: cyPoints, //vec3 array,
+                   updatable: true
+               }
+
+                 let lines = BABYLON.MeshBuilder.CreateLines("lines", lineOptions);  //scene is optional and defaults to the current scene
+
+
 #### Text and GUI in Babylon JS 
 ##### e.g. Buttons, Text, Containers, Images, Color Picker, Input - Keyboard 
 
