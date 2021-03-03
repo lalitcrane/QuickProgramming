@@ -2,6 +2,8 @@
 
 #### Animation Function. Rotate, Move around (change x and Y)
 
+    https://playground.babylonjs.com/#XQI4UY#3
+    
     var phi = 0;
     scene.registerAfterRender(function () {
         matrix = cylinder.getWorldMatrix();
