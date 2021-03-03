@@ -1,5 +1,9 @@
 
 
+#### Wireframe
+
+      box.material.wireframe = true;
+
 ##### Shapes with holes in it. Ring, Square with hole in it.
 
           const mat = new BABYLON.StandardMaterial("mat");
