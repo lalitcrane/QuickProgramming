@@ -8,6 +8,14 @@
     * Dimmer Intensity
     * https://babylonjsguide.github.io/gamelets/Sequence
 
+#### Material
+      * To see all faces.
+         mat.backFaceCulling = false;  //Show all faces
+      * Use Flat Shades to see it correctly
+           mymesh.convertToFlatShadedMesh();
+
+
+
 #### Dispose of a Mesh 
 
    * cylinder.dispose()
