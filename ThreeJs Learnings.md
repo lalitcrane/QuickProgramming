@@ -10,6 +10,8 @@
     * MeshPhysicalMaterial
         *  An extension of the MeshStandardMaterial, providing more advanced physically-based rendering properties:
 
+#### Transparency 
+     * https://threejsfundamentals.org/threejs/lessons/threejs-transparency.html
      * transparency and opacity 
          Use opacity=0.5 and       transparent : true,
 
