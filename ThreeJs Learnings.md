@@ -1,4 +1,19 @@
 
+#### Materials
+
+    * MeshPhongMaterial
+      * A material for non-shiny surfaces, without specular highlights.
+    * MeshLambertMaterial
+      * A material for non-shiny surfaces, without specular highlights.
+    * MeshStandardMaterial
+       * A standard physically based material, using Metallic-Roughness workflow.
+    * MeshPhysicalMaterial
+        *  An extension of the MeshStandardMaterial, providing more advanced physically-based rendering properties:
+
+     * transparency and opacity 
+         Use opacity=0.5 and       transparent : true,
+
+
 
 
 ## Three Js along with Bootstrap
