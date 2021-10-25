@@ -10,6 +10,8 @@ https://www.webdesignerdepot.com/2018/02/8-best-free-libraries-for-svg/
   5. Raphael.js (first one and the most widely used one)
   6. velocity.js (for animations)
   7. Two.js (used across canvas, webgl, html5)
+  8. pointsjs (pts.js) Beautifl Points Animation.
+  9. anime.js (good for animation.......)
 
 
 
