@@ -13,7 +13,9 @@ https://www.webdesignerdepot.com/2018/02/8-best-free-libraries-for-svg/
   8. pointsjs (pts.js) Beautifl Points Animation.
   9. anime.js (good for animation.......)
 
-
+#### Full fledged game engine.
+  1. Pixi.js
+  2. bonsai.js
 
 #### SVG Editors Local.
   1. Inkscape (installed locally)
