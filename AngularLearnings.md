@@ -64,3 +64,44 @@
  3. Child to Parent: Sharing Data via Output() and EventEmitter
  4. Unrelated Components: Sharing Data with a Service
  
+
+ ### Angular and SVG problems.
+ #### Why adding SVG content dynamically in componen.html files are so difficult.
+ ##### Angular Sanitizes any content dynamically added to component.html files for security reason.s
+ ##### Alternative given below.
+   * Link: https://stackoverflow.com/questions/31548311/angular-html-binding?rq=1
+ 
+ Short answer was provided here already: use <div [innerHTML]="yourHtml"> binding.
+
+However the rest of the advices mentioned here might be misleading. Angular has a built-in sanitizing mechanism when you bind to properties like that. Since Angular is not a dedicated sanitizing library, it is overzealous towards suspicious content to not take any risks. For example, it sanitizes all SVG content into empty string.
+
+You might hear advices to "sanitize" your content by using DomSanitizer to mark content as safe with bypassSecurityTrustXXX methods. There are also suggestions to use pipe to do that and that pipe is often called safeHtml.
+
+All of this is misleading because it actually bypasses sanitizing, not sanitizing your content. This could be a security concern because if you ever do this on user provided content or on anything that you are not sure about — you open yourself up for a malicious code attacks.
+
+If Angular removes something that you need by its built-in sanitization — what you can do instead of disabling it is delegate actual sanitization to a dedicated library that is good at that task. For example — DOMPurify.
+
+I've made a wrapper library for it so it could be easily used with Angular: https://github.com/TinkoffCreditSystems/ng-dompurify
+
+It also has a pipe to declaratively sanitize HTML:
+
+<div [innerHtml]="value | dompurify"></div>
+The difference to pipes suggested here is that it actually does do the sanitization through DOMPurify and therefore work for SVG.
+
+One thing to keep in mind is DOMPurify is great for sanitizing HTML/SVG, but not CSS. So you can provider Angular's CSS sanitizer to handle CSS:
+
+import {NgModule, ɵ_sanitizeStyle} from '@angular/core';
+import {SANITIZE_STYLE} from '@tinkoff/ng-dompurify';
+
+@NgModule({
+    // ...
+    providers: [
+        {
+            provide: SANITIZE_STYLE,
+            useValue: ɵ_sanitizeStyle,
+        },
+    ],
+    // ...
+})
+export class AppModule {}
+It's internal — hense ɵ prefix, but this is how Angular team use it across their own packages as well anyway. That library also works for Angular Universal and server side renedring environment.
