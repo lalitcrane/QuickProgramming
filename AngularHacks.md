@@ -62,11 +62,16 @@
           * Use ngAfterViewInit() method.
 #### Code Snippets for ViewChild etc etc.
 
-                  @ViewChildren(HelloComponent) myValue: QueryList<HelloComponent>;
+            export class AppComponent implements AfterViewInit {
 
-                   ngAfterViewInit() {
-                       console.log("Hello ", this.myValue);
-                   }
+             name = "Angular";
+
+             // Accessing multiple native DOM elements using QueryList
+             @ViewChildren(HelloComponent) myValue: QueryList<HelloComponent>;
+
+             ngAfterViewInit() {
+                 console.log("Hello ", this.myValue);
+             }
  
 #### Adding Elements Dynamically.
 
