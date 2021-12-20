@@ -48,3 +48,43 @@
           <use xlink:href="assets/customsvg/mysvgicons.svg#exampleid"></use>
         </svg>
       </a>
+
+### Adding HTML Elements or Angular Components dynamically
+#### Use ViewChild or ViewChildren or Renderer2
+
+
+          * ViewChild or ViewChildren gives reference to ElementRef which can be used to add/remove new elementts.
+          * Renderer2 is best for DOM Manupulation.....add/remove, change elements etc etc. 
+          * Refer: https://www.tektutorialshub.com/angular/renderer2-angular/
+          * https://www.concretepage.com/angular-2/angular-4-renderer2-example
+          * Understanding ViewChild and QuerySelector: https://www.pluralsight.com/guides/querying-the-dom-with-@viewchild-and-@viewchildren
+          * ViewChild Examples: https://blog.angular-university.io/angular-viewchild/
+          * Use ngAfterViewInit() method.
+#### Code Snippets for ViewChild etc etc.
+
+                  @ViewChildren(HelloComponent) myValue: QueryList<HelloComponent>;
+
+                   ngAfterViewInit() {
+                       console.log("Hello ", this.myValue);
+                   }
+ 
+#### Adding Elements Dynamically.
+
+            import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+
+            @Component({
+               selector: 'app-append',
+               templateUrl: './append-demo.component.html'
+            })
+            export class AppendDemoComponent { 
+               @ViewChild('abcd') 
+               private abcd = {} as ElementRef;
+               constructor(private renderer: Renderer2) {
+               }
+               onClick() {
+                 const li = this.renderer.createElement('li');
+                 const text = this.renderer.createText('Click here to add li');
+                 this.renderer.appendChild(li, text);
+                 this.renderer.appendChild(this.abcd.nativeElement, li);
+               }
+}                    
